@@ -41,16 +41,15 @@
             this.shashka1.Click += new System.EventHandler(this.shashka1_Click);
             this.shashka1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka1_MouseDown);
             this.shashka1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka1_MouseMove);
-            this.shashka1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka1_MouseUp);
             // 
             // shashka2
             // 
             resources.ApplyResources(this.shashka2, "shashka2");
             this.shashka2.Name = "shashka2";
             this.shashka2.UseVisualStyleBackColor = true;
+            this.shashka2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.shashka2_MouseClick);
             this.shashka2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka2_MouseDown);
             this.shashka2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka2_MouseMove);
-            this.shashka2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka2_MouseUp);
             // 
             // okno
             // 

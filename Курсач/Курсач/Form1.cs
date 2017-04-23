@@ -28,19 +28,13 @@ namespace Курсач
 
         private void shashka1_Click(object sender, EventArgs e)
         {
-           //clicks[0] = (clicks[0] + 1) % 2;
+           clicks[0] = (clicks[0] + 1) % 2;
+            if (clicks[0] == 0) { DownPoint = new Point(); }
         }
 
         private void shashka1_MouseDown(object sender, MouseEventArgs e)
         {
             DownPoint = e.Location;
-            clicks[0] = 1;
-        }
-
-        private void shashka1_MouseUp(object sender, MouseEventArgs e)
-        {
-            DownPoint = new Point();
-            clicks[0] = 0;
         }
 
         private void shashka1_MouseMove(object sender, MouseEventArgs e)
@@ -55,13 +49,6 @@ namespace Курсач
         private void shashka2_MouseDown(object sender, MouseEventArgs e)
         {
             DownPoint = e.Location;
-            clicks[1] = 1;
-        }
-
-        private void shashka2_MouseUp(object sender, MouseEventArgs e)
-        {
-            DownPoint = new Point();
-            clicks[1] = 0;
         }
 
         private void shashka2_MouseMove(object sender, MouseEventArgs e)
@@ -71,6 +58,12 @@ namespace Курсач
                 Point dp = new Point(e.Location.X - DownPoint.X, e.Location.Y - DownPoint.Y);
                 shashka2.Location = new Point(shashka2.Location.X + dp.X, shashka2.Location.Y + dp.Y);
             }
+        }
+
+        private void shashka2_MouseClick(object sender, MouseEventArgs e)
+        {
+            clicks[1] = (clicks[1] + 1) % 2;
+            if (clicks[1] == 0) { DownPoint = new Point(); }
         }
     }
 }
