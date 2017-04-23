@@ -29,43 +29,48 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(okno));
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.shashka1 = new System.Windows.Forms.Button();
+            this.shashka2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // shashka1
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            resources.ApplyResources(this.shashka1, "shashka1");
+            this.shashka1.Name = "shashka1";
+            this.shashka1.UseVisualStyleBackColor = true;
+            this.shashka1.Click += new System.EventHandler(this.shashka1_Click);
+            this.shashka1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka1_MouseDown);
+            this.shashka1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka1_MouseMove);
+            this.shashka1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka1_MouseUp);
             // 
-            // textBox1
+            // shashka2
             // 
-            resources.ApplyResources(this.textBox1, "textBox1");
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
+            resources.ApplyResources(this.shashka2, "shashka2");
+            this.shashka2.Name = "shashka2";
+            this.shashka2.UseVisualStyleBackColor = true;
+            this.shashka2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.shashka2_MouseDown);
+            this.shashka2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.shashka2_MouseMove);
+            this.shashka2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.shashka2_MouseUp);
             // 
             // okno
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.shashka2);
+            this.Controls.Add(this.shashka1);
             this.KeyPreview = true;
             this.MaximizeBox = false;
             this.Name = "okno";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button shashka1;
+        private System.Windows.Forms.Button shashka2;
     }
 }
 
